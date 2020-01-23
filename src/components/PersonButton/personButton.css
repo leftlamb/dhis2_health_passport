@@ -1,0 +1,28 @@
+
+@media only screen and (max-width: 800px) {
+
+}
+
+.button {
+    padding: 5px;
+    min-height: 60px;
+    width: 90%;
+    border-radius: 3px;
+    margin: 10px 0;
+    box-shadow: 0 2px 5px 0 #666;
+}
+
+.name {
+    font-size: 1.4em;
+}
+
+.pob {
+
+}
+.contactNumber {
+
+}
+
+.personalInfo span {
+    margin: 5px 5px;
+}

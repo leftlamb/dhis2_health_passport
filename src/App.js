@@ -2,7 +2,7 @@ import React from 'react'
 import { DataQuery } from '@dhis2/app-runtime'
 import i18n from '@dhis2/d2-i18n'
 import './app.css'
-import {Card} from './components'
+import {Card, PersonButton} from './components'
 
 import journal_icon from './img/journal_icon.png'
 
@@ -20,7 +20,30 @@ const MyApp = () => (
                 <button className="searchButton">Search</button>
             </div>
             <div className="resultContainer">
-                
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
+                <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476"/>
             </div>
         </div>
         <div className="cardContainer">
