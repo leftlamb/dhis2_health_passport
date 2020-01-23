@@ -1,6 +1,10 @@
 import React from 'react'
 import { DataQuery } from '@dhis2/app-runtime'
 import i18n from '@dhis2/d2-i18n'
+import './app.css'
+import {Card} from './components'
+
+import journal_icon from './img/journal_icon.png'
 
 const query = {
     me: {
@@ -10,7 +14,34 @@ const query = {
 
 const MyApp = () => (
     <div className="container">
-        <style jsx>{`
+        <div className="searchContainer">
+            <div className="input">
+                <input className=""></input>
+                <button className="searchButton">Search</button>
+            </div>
+            <div className="resultContainer">
+                
+            </div>
+        </div>
+        <div className="cardContainer">
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+            <Card name="test" img={journal_icon}/>
+        </div>
+
+        {/* <style jsx>{`
             .container {
                 width: 100%;
                 height: 100%;
@@ -20,8 +51,8 @@ const MyApp = () => (
                 justify-content: center;
                 font-size: 1rem;
             }
-        }`}</style>
-        <DataQuery query={query}>
+        }`}</style> */}
+        {/* <DataQuery query={query}>
             {({ error, loading, data }) => {
                 if (error) return <span>ERROR</span>
                 if (loading) return <span>...</span>
@@ -34,7 +65,7 @@ const MyApp = () => (
                     </>
                 )
             }}
-        </DataQuery>
+        </DataQuery> */}
     </div>
 )
 

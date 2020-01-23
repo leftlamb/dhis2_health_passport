@@ -1,0 +1,46 @@
+.container {
+    width: 100%;
+    height: 100%;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        width: 100%;
+        height: 100%;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1rem;
+    }
+}
+
+.searchContainer {
+    display: flex;
+    flex-direction: column;
+
+}
+.input {
+    display: flex;
+}
+
+.resultContainer {
+    margin-top: 80px;
+
+}
+.resultContainer div {
+    margin: 10 0;
+}
+
+.cardContainer {
+    width: 80%;
+    padding: 5px;
+    border-top: 1px solid #666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
