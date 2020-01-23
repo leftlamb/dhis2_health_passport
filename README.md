@@ -1,2 +1,2 @@
-# dhis2_helth_passport
+# dhis2_health_passport
 DHIS2 health passport application
