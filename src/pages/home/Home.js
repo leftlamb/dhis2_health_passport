@@ -17,9 +17,6 @@ const query = {
 export const Home = (props) => {
     let history = useHistory()
 
-    const test = (what)=>{
-        console.log(what)
-    }
     return (
         <div className="container">
             <div className="searchContainer">
@@ -28,7 +25,7 @@ export const Home = (props) => {
                     <button className="searchButton">Search</button>
                 </div>
                 <div className="resultContainer">
-                    <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476" history={history}/>
+                    <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476" history={history} setPatient={(data)=>props.setPatient(data)}/>
                 </div>
             </div>
             <div className="cardContainer">

@@ -6,8 +6,17 @@ import {
 } from 'react-router-dom'
 
 export const PersonButton = (props) => {
+    const selectPatient = () => {
+        props.setPatient({
+            name: props.name,
+            pob: props.pob,
+            contactNumber: props.contactNumber,
+            id: '12354564567'
+        })
+        props.history.push('/patient')
+    }
     return(
-        <button className="button" onClick={()=>props.history.push('/patient')}>
+        <button className="button" onClick={()=>selectPatient()}>
                 <span className="name">{props.name}</span>
             <div className="personalInfo">
                 <span className="dob">Place Of Birth: {props.pob}</span>
@@ -15,4 +24,4 @@ export const PersonButton = (props) => {
             </div>
         </button>
     )
-    }
+}

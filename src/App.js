@@ -14,7 +14,10 @@ const MyApp = () => {
         contactNumber: "",
         id: "",
     })
-    const [redirect, setRedirect] = useState('/')
+
+    useEffect(()=>{
+        console.log(patient)
+    }, [patient])
 
     return (
         <Router>
@@ -22,11 +25,13 @@ const MyApp = () => {
                 <Route exact path="/">
                     <Home 
                         patient={patient}
-                        setPatient={()=>setPatient()}
+                        setPatient={(data)=>setPatient(data)}
                     />
                 </Route>
                 <Route path="/patient">
-                    <Patient />
+                    <Patient 
+                        patient={patient}
+                    />
                 </Route>
             </Switch>
         </Router>
