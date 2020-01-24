@@ -26,6 +26,8 @@ export const Home = (props) => {
                 </div>
                 <div className="resultContainer">
                     <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476" history={history} setPatient={(data)=>props.setPatient(data)}/>
+                    <PersonButton name="Yoshi Bring Hah!" pob="Lilongwe" contactNumber="23458342" history={history} setPatient={(data)=>props.setPatient(data)}/>
+                    <PersonButton name="John Traore II" pob="Zomba" contactNumber="99795712" history={history} setPatient={(data)=>props.setPatient(data)}/>
                 </div>
             </div>
             <div className="cardContainer">

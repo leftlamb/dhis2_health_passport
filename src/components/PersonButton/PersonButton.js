@@ -1,10 +1,6 @@
 import React from 'react'
 import './personButton.css'
 
-import {
-    Redirect
-} from 'react-router-dom'
-
 export const PersonButton = (props) => {
     const selectPatient = () => {
         props.setPatient({

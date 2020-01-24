@@ -1,0 +1,47 @@
+.patientContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.patientName {
+    padding: 10px 10%;
+    font-size: 2em;
+}
+
+.backButton {
+    position: fixed;
+    left: 0;
+    height: 2em;
+    width: 10;
+    text-decoration: none;
+    border: none;
+    font-size: 1.4em;
+    box-shadow: 0 2px 5px 0 #666;
+    border-bottom-right-radius: 4px;
+}
+
+.buttonContainer {
+    display: flex;
+}
+.buttonContainer button {
+    flex: 1;
+    margin: 0 1px;
+    text-decoration: none;
+    border: none;
+    font-size: 1.2em;
+    box-shadow: 0 2px 5px 0 #666;
+    border-radius: 4px;
+}
+
+.buttonContainer button:nth-child(1){
+    background-color: #2ecc71;
+}
+/* .buttonContainer button:nth-child(2){
+    background-color: #f1c40f;
+} */
+
+.informationContainer {
+    width: 90%;
+}
