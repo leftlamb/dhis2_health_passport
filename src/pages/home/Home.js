@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom'
 
 import i18n from '@dhis2/d2-i18n'
 import './home.css'
-import {Card, PersonButton} from '../../components'
+import {Card, PersonButton, Search} from '../../components'
 
 import journal_icon from '../../img/journal_icon.png'
 
@@ -20,9 +20,8 @@ export const Home = (props) => {
     return (
         <div className="container">
             <div className="searchContainer">
-                <div className="input">
-                    <input className=""></input>
-                    <button className="searchButton">Search</button>
+                <div className="searchBarContainer">
+                    <Search/>
                 </div>
                 <div className="resultContainer">
                     <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476" history={history} setPatient={(data)=>props.setPatient(data)}/>
