@@ -1,6 +1,7 @@
 import React from 'react'
 import './personButton.css'
 
+
 export const PersonButton = (props) => {
     const selectPatient = () => {
         props.setPatient({
