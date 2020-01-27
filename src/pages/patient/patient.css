@@ -20,6 +20,7 @@
     font-size: 1.4em;
     box-shadow: 0 2px 5px 0 #666;
     border-bottom-right-radius: 4px;
+    z-index: 20;
 }
 
 .buttonContainer {
@@ -45,4 +46,5 @@
 
 .informationContainer {
     width: 90%;
+    padding: 20px 0;
 }

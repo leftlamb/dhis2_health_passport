@@ -10,9 +10,38 @@ import {Home, Patient} from './pages'
 const MyApp = () => {
     const [patient, setPatient] = useState({
         name: "",
-        pob: "",
+        sex: "",
+        dob: "",
         contactNumber: "",
+        placeob: "",
+        village: "",
+        religion: "",
+        occupation: "",
+        maritalStatus: "",
+        useOfAlcohol: "",
+        useOfTobacco: "",
+        bloodGroup: "",
+        allergies: [],
         id: "",
+        familyHistory: {
+            allergies: "",
+            mentalDiseases: "",
+            neoplasms: "",
+            asthma: "",
+            diabetes: "",
+            cardiovascularDiseases: "",
+            endocrineDiseases: "",
+            hypertension: "",
+            rheumatism: "",
+            sickleCellDiseases: "",
+            otherDiseases: "",
+        },
+        pastMedicalSurgicalHistory: {
+            
+        },
+        familyPlanning: {
+            
+        },
     })
 
     useEffect(()=>{

@@ -16,7 +16,55 @@ const query = {
 
 export const Home = (props) => {
     let history = useHistory()
-
+    const patient1 = {
+        name:"John Traore",
+        pob:"Zomba",
+        contactNumber:"90199476",
+        sex: "M",
+        dob: "25.12.1995",
+        village: "",
+        religion: "",
+        occupation: "",
+        maritalStatus: "",
+        useOfAlcohol: true,
+        useOfTobacco: true,
+        bloodGroup: "0",
+        allergies: ['Fish', 'Nuts', 'Poisenes snakes'],
+        id: "",
+    }
+    const patient2 = {
+        name:"John Traore II",
+        pob:"Zomba",
+        contactNumber:"99795712",
+        sex: "F",
+        dob: "",
+        village: "Zomba",
+        religion: "Jedi",
+        occupation: "",
+        maritalStatus: "",
+        useOfAlcohol: false,
+        useOfTobacco: true,
+        bloodGroup: "AB",
+        allergies: [],
+        id: "",
+    }
+    const patient3 = {
+        name:"Yoshi Bring Hah!",
+        pob:"Lilongwe",
+        contactNumber:"23458342",
+        sex: "M",
+        dob: "25.12.1995",
+        village: "",
+        religion: "",
+        occupation: "",
+        maritalStatus: "",
+        useOfAlcohol: false,
+        useOfTobacco: true,
+        bloodGroup: "0",
+        allergies: [],
+        id: "",
+    }
+    
     return (
         <div className="container">
             <div className="searchContainer">
@@ -24,9 +72,21 @@ export const Home = (props) => {
                     <Search/>
                 </div>
                 <div className="resultContainer">
-                    <PersonButton name="John Traore" pob="Zomba" contactNumber="90199476" history={history} setPatient={(data)=>props.setPatient(data)}/>
-                    <PersonButton name="Yoshi Bring Hah!" pob="Lilongwe" contactNumber="23458342" history={history} setPatient={(data)=>props.setPatient(data)}/>
-                    <PersonButton name="John Traore II" pob="Zomba" contactNumber="99795712" history={history} setPatient={(data)=>props.setPatient(data)}/>
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient1}
+                    />
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient2}
+                    />
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient3}
+                    />
                 </div>
             </div>
             <div className="cardContainer">
