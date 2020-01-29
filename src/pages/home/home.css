@@ -32,7 +32,8 @@
 
 .resultContainer {
     width: 80%;
-    margin-top: 80px;
+    margin-bottom: 60px;
+    margin-top: 20px;
     max-height: 60vh;
     overflow-y: scroll;
     display: flex;

@@ -87,24 +87,47 @@ export const Home = (props) => {
                         setPatient={(data)=>props.setPatient(data)}
                         patient={patient3}
                     />
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient3}
+                    />
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient3}
+                    />
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient3}
+                    />
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient3}
+                    />
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient3}
+                    />
+                    <PersonButton 
+                        history={history} 
+                        setPatient={(data)=>props.setPatient(data)}
+                        patient={patient3}
+                    />
                 </div>
             </div>
+            
             <div className="cardContainer">
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
-                <Card name="test" img={journal_icon}/>
+                <Card name="Active Patients" img={journal_icon} history={history} site="/"/>
+                <Card name="Register Patient" img={journal_icon} history={history} site="/register"/>
+                <Card name="Journal" img={journal_icon} history={history} site="/"/>
+                <Card name="Disease Guidelines" img={journal_icon} history={history} site="/"/>
+                <Card name="Drug Ordering" img={journal_icon} history={history} site="/"/>
+                <Card name="Create Report" img={journal_icon} history={history} site="/"/>
+                <Card name="Equipment Ordering" img={journal_icon} history={history} site="/"/>
             </div>
         </div>
     )

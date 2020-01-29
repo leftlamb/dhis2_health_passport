@@ -11,10 +11,15 @@
     max-width: 48%;
     height: 200px;
     margin: 2px;
-    font-size: 2em;
+    font-size: 1.6em;
     box-shadow: 0 2px 5px 0 #666;
     border-radius: 2px;
 }
+
+.cardDescription {
+    text-align: center;
+}
+
 
 .image {
     height: 100px;

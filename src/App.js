@@ -5,7 +5,7 @@ import {
     Route,
 } from 'react-router-dom';
 
-import {Home, Patient} from './pages'
+import {Home, Patient, Register} from './pages'
 
 const MyApp = () => {
     const [patient, setPatient] = useState({
@@ -61,6 +61,9 @@ const MyApp = () => {
                     <Patient 
                         patient={patient}
                     />
+                </Route>
+                <Route path="/register">
+                    <Register/>
                 </Route>
             </Switch>
         </Router>
