@@ -32,6 +32,10 @@ const useStyles = makeStyles(theme => ({
     selectEmpty: {
       marginTop: theme.spacing(2),
     },
+    sex: {
+        color: '#666',
+        paddingTop: 14,
+    }
 }));
 
 export const Register = (props) => {
@@ -61,7 +65,7 @@ export const Register = (props) => {
                         <InputLabel htmlFor="name">Name</InputLabel>
                         <Input id="my-input" aria-describedby="my-helper-text" />
                     </FormControl>
-                    <FormControl className={classes.formControl}>
+                    <FormControl className={`${classes.formControl} ${classes.sex}`}>
                         <RadioGroup aria-label="gender" name="gender1" value={sex} onChange={()=>setSex(event.target.value)} row>
                             <FormControlLabel value="female" control={<Radio color="primary"/>} label="Female" />
                             <FormControlLabel value="male" control={<Radio color="primary"/>} label="Male" />
@@ -162,6 +166,12 @@ export const Register = (props) => {
                         </MuiPickersUtilsProvider>
                     </FormControl> */}
 
+                </div>
+                <div className="registerFamily">
+
+                </div>
+                <div className="registerFamily">
+                    
                 </div>
             </form>
         </div>
