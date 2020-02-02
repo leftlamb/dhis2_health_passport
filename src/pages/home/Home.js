@@ -33,7 +33,7 @@ export const Home = (props) => {
         id: "",
     }
     const patient2 = {
-        name:"John Traore II",
+        name:"Lady John Traore II",
         pob:"Zomba",
         contactNumber:"99795712",
         sex: "F",
@@ -41,7 +41,7 @@ export const Home = (props) => {
         village: "Zomba",
         religion: "Jedi",
         occupation: "",
-        maritalStatus: "",
+        maritalStatus: "Married",
         useOfAlcohol: false,
         useOfTobacco: true,
         bloodGroup: "AB",

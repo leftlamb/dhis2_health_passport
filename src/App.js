@@ -8,27 +8,15 @@ import {
 import {Home, Patient, Register} from './pages'
 
 const MyApp = () => {
-    const dataElement = {
-        name: "",
-        description: "", //use as helper text
-        valueType: "",
-        
-    }
     const [patient, setPatient] = useState({
         name: "",
         sex: {
-            value: "",
-            type: "",
-            optionSetDataValues: "",
+            name: "",
         },
         dob: "",
         contactNumber: "",
         placeob: "",
-        village: {
-            value: "",
-            type: "text",
-
-        },
+        village: "",
         religion: "",
         occupation: "",
         maritalStatus: "",

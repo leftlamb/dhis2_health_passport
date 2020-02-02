@@ -20,6 +20,5 @@ export const useStyles = makeStyles(theme => ({
   },
   undefined: {
       color: '#f00',
-      textWeight: "bold",
   },
   }));

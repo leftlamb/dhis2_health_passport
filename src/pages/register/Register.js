@@ -15,7 +15,7 @@ import {
     Checkbox,
 } from '@material-ui/core';
 
-import DateFnsUtils from '@date-io/date-fns';
+// import DateFnsUtils from '@date-io/date-fns';
 import {
   MuiPickersUtilsProvider,
   KeyboardDatePicker,
@@ -23,6 +23,7 @@ import {
 
 import './register.css'
 
+// import {} 
 
 const useStyles = makeStyles(theme => ({
     formControl: {
@@ -36,7 +37,74 @@ const useStyles = makeStyles(theme => ({
         color: '#666',
         paddingTop: 14,
     }
-}));
+}))
+
+const dataElements = [
+    {
+        // id: "qR2egL2KtTM",
+        dataElement: {
+            name: "Name",
+            // id: "Vk1tzSQxvOR",
+            valueType: "TEXT",
+            optionSetValue: false,
+        }
+    },
+    {
+        // id: "qR2egL2KtTM",
+        dataElement: {
+            name: "Gender",
+            // id: "Vk1tzSQxvOR",
+            valueType: "TEXT",
+            optionSetValue: true,
+            optionSet: {
+                name: "Gender",
+                // id: "isYOcVDBgJo",
+                options: [
+                    {
+                        name: "Male",
+                        id: "SGnpWzOu1Bq"
+                    },
+                    {
+                        name: "Female",
+                        id: "iNZU6alTXAP"
+                    },
+                ]
+            }
+        }
+    },
+    {
+        // id: "qR2egL2KtTM",
+        dataElement: {
+            name: "Wives",
+            // id: "Vk1tzSQxvOR",
+            valueType: "NUMBER",
+            optionSetValue: false,
+        }
+    },
+    {
+        // id: "qR2egL2KtTM",
+        dataElement: {
+            name: "Use of alcohol",
+            // id: "Vk1tzSQxvOR",
+            valueType: "TRUE_ONLY",
+            optionSetValue: false,
+        }
+    },
+    {
+        // id: "qR2egL2KtTM",
+        dataElement: {
+            name: "Use of tobacco",
+            // id: "Vk1tzSQxvOR",
+            valueType: "BOOLEAN",
+            optionSetValue: false,
+        }
+    },
+]
+
+const valueTypes = ['TEXT', 'TRUE_ONLY', 'FILE_RESOURCE', 'BOOLEAN', 'INTEGER_POSITIVE', 'NUMBER', 'DATE', 'LONG_TEXT', 'INTEGER', 'INTEGER_ZERO_OR_POSITIVE']
+const otherNeededTypes = ['PERCENTAGE', 'DATE_TIME', 'UNIT_INTERVAL', 'PHONE_NUMBER', 'LETTER']
+
+import {TextInput, NumberInput, OptionSetInput, RadioButtonInput} from '../../components/DataInput'
 
 export const Register = (props) => {
     const classes = useStyles();
@@ -52,6 +120,7 @@ export const Register = (props) => {
     const handleDateChange = date => {
         setSelectedDate(date);
     };
+    console.log(dataElements)
 
     return (
         <div className="registerContainer">
@@ -61,16 +130,26 @@ export const Register = (props) => {
             </span>
             <form className="registerForm">
                 <div className="registerGeneral">
-                    <FormControl className={classes.formControl}>
-                        <InputLabel htmlFor="name">Name</InputLabel>
-                        <Input id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
-                    <FormControl className={`${classes.formControl} ${classes.sex}`}>
+                    {dataElements.map((dataElement, key) => {
+                        console.log(dataElement.dataElement.optionSetValue)
+                        if(dataElement.dataElement.optionSetValue) {
+                            console.log(dataElement.dataElement.name)
+                            return <OptionSetInput name={dataElement.dataElement.name} options={dataElement.dataElement.optionSet.options}/>
+                        } else {
+                            if(dataElement.dataElement.valueType==="TEXT")
+                                return <TextInput key={key} name={dataElement.dataElement.name}/>
+                            else if(dataElement.dataElement.valueType==="NUMBER")
+                                return <NumberInput key={key} name={dataElement.dataElement.name}/>
+                            else if(dataElement.dataElement.valueType==="TRUE_ONLY" || dataElement.dataElement.valueType==="BOOLEAN")
+                                return <RadioButtonInput key={key} name={dataElement.dataElement.name} />
+                        }
+                    })}
+
+                    {/* <FormControl className={`${classes.formControl} ${classes.sex}`}>
                         <RadioGroup aria-label="gender" name="gender1" value={sex} onChange={()=>setSex(event.target.value)} row>
                             <FormControlLabel value="female" control={<Radio color="primary"/>} label="Female" />
                             <FormControlLabel value="male" control={<Radio color="primary"/>} label="Male" />
                         </RadioGroup>
-                        {/* <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText> */}
                     </FormControl>
                     <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="village">Village</InputLabel>
@@ -106,22 +185,20 @@ export const Register = (props) => {
                             <MenuItem value={4}>Divorced</MenuItem>
                             <MenuItem value={5}>Separated</MenuItem>
                         </Select>
-                    </FormControl>
-                    <FormControl className={classes.formControl}>
-                        {/* <InputLabel>Marital Status</InputLabel> */}
+                    </FormControl> */}
+                    {/* <FormControl className={classes.formControl}>
                         <FormControlLabel
                             control={<Checkbox checked={alcohol} color="primary" onChange={()=>setAlcohol(!alcohol)} value="alcohol" />}
                             label="Use of alcohol"
                         />
-                    </FormControl>
-                    <FormControl className={classes.formControl}>
-                        {/* <InputLabel>Marital Status</InputLabel> */}
+                    </FormControl> */}
+                    {/* <FormControl className={classes.formControl}>
                         <FormControlLabel
                             control={<Checkbox checked={tobacco} color="primary" onChange={()=>setTobacco(!tobacco)} value="tobacco" />}
                             label="Use of Tobacco"
                         />
-                    </FormControl>
-                    <FormControl className={classes.formControl}>
+                    </FormControl> */}
+                    {/* <FormControl className={classes.formControl}>
                         <InputLabel id="demo-simple-select-label">Blood group</InputLabel>
                         <Select
                             labelId="demo-simple-select-label"
@@ -134,8 +211,8 @@ export const Register = (props) => {
                             <MenuItem value={3}>B</MenuItem>
                             <MenuItem value={4}>AB</MenuItem>
                         </Select>
-                    </FormControl>
-                    <FormControl className={classes.formControl}>
+                    </FormControl> */}
+                    {/* <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="occupation">Occupation</InputLabel>
                         <Input id="my-input" aria-describedby="my-helper-text" />
                     </FormControl>
@@ -146,7 +223,7 @@ export const Register = (props) => {
                     <FormControl className={classes.formControl}>
                         <InputLabel htmlFor="occupation">Occupation</InputLabel>
                         <Input id="my-input" aria-describedby="my-helper-text" />
-                    </FormControl>
+                    </FormControl> */}
                     {/* <FormControl>
                         <InputLabel htmlFor="name">Date</InputLabel>
                         <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -165,8 +242,8 @@ export const Register = (props) => {
                             />
                         </MuiPickersUtilsProvider>
                     </FormControl> */}
-
                 </div>
+                
                 <div className="registerFamily">
 
                 </div>

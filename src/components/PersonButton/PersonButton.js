@@ -4,6 +4,7 @@ import './personButton.css'
 
 export const PersonButton = (props) => {
     const selectPatient = () => {
+        console.log(props.patient)
         props.setPatient(props.patient)
         props.history.push('/patient')
     }

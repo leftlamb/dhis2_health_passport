@@ -10,6 +10,7 @@ export const Patient = (props) => {
     const [isEnrolled, setEnrolled] = useState(false)
 
     useEffect(()=>{
+        console.log(props.patient)
         if(props.patient.name==="") {
             history.push('/')
         }
