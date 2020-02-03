@@ -8,7 +8,6 @@
 
 .button {
     cursor: pointer;
-    /* padding: 5px; */
     min-height: 70px;
     width: 90%;
     border-radius: 3px;
@@ -16,12 +15,20 @@
     box-shadow: 0 2px 5px 0 #666;
     text-decoration: none;
     border: none;
-    color: #fff;
+    transition: 1s;
 }
+
 .man {
+    background: linear-gradient(200deg, #2980b9 1%, rgba(255, 255, 255, .1) 20%);
+}
+.man:hover {
     background-color: #2980b9;
 }
+
 .woman {
+    background: linear-gradient(200deg, #f1c40f 1%, rgba(255, 255, 255, .1) 20%);
+}
+.woman:hover {
     background-color: #f1c40f;
 }
 
