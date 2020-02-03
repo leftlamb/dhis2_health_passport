@@ -5,3 +5,14 @@
 .undefined {
     color: #f00;
 }
+
+.listElement {
+    margin: 5px;
+}
+
+.listElement::after {
+    content: ", ";
+}
+.listElement:last-of-type::after {
+    content: "";
+}

@@ -2,16 +2,9 @@ import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import { 
     FormControl, 
-    InputLabel, 
-    Input, 
-    FormHelperText, 
     RadioGroup, 
     FormControlLabel, 
     Radio,
-    FormLabel,
-    Select,
-    MenuItem,
-    Checkbox,
 } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({

@@ -37,7 +37,6 @@ const useStyles = makeStyles(theme => ({
 
 export const GeneralInformation = (props) => {
     const classes = useStyles()
-    // console.log(classes)
     const [expanded, setExpanded] = useState(false)
 
     return (
@@ -53,20 +52,17 @@ export const GeneralInformation = (props) => {
             <ExpansionPanelDetails className={classes.details}>
                 <div>
                     <DataDisplay name="Name" value={props.patient.name}/>
-                    <DataDisplay classes={classes} name="Name" value=""/>
-
-                    <span><b>Sex</b>: {props.patient.sex === "M"?"Male":"Female"}</span>
-                    <span><b>Marital Status</b>: {props.patient.maritalStatus === "M"?"Male":"Female"}</span>
-                    <span><b>National ID</b>: {props.patient.id===""? <span className={classes.undefined}>Not recieved</span>:props.patient.id }</span>
-                    <span><b>Date of birth</b>: {props.patient.dob===""? <span className={classes.undefined}>Not recieved</span>:props.patient.dob }</span>
-                    <span><b>Contact Number</b>: {props.patient.contactNumber===""? <span className={classes.undefined}>Not recieved</span>:props.patient.contactNumber }</span>
-                    <span><b>Village</b>: {props.patient.village===""? <span className={classes.undefined}>Not recieved</span>:props.patient.village }</span>
-                    <span><b>Occupation</b>: {props.patient.occupation===""? <span className={classes.undefined}>Not recieved</span>:props.patient.occupuation }</span>
-                    <span><b>Religion</b>: {props.patient.religion===""? <span className={classes.undefined}>Not recieved</span>:props.patient.religion }</span>
-                    <span><b>Blood group</b>: {props.patient.religion===""? <span className={classes.undefined}>Not recieved</span>:props.patient.religion }</span>
-                    <span><b>Allergies</b>: {props.patient.allergies.length<1? <span className={classes.undefined}>No known allergies</span>:props.patient.allergies }</span>
-                    <span><b>Use of Alcohol</b>: {props.patient.useOfAlcohol?'Yes':'No'}</span>
-                    <span><b>Use of Tobacco</b>: {props.patient.useOfTobacco?'Yes':'No'}</span>
+                    <DataDisplay name="Gender" value={props.patient.sex}/>
+                    <DataDisplay name="Marital Status" value={props.patient.maritalStatus}/>
+                    <DataDisplay name="Date of Birth" value={props.patient.dob}/>
+                    <DataDisplay name="Village" value={props.patient.village}/>
+                    <DataDisplay name="Contact Number" value={props.patient.contactNumber}/>
+                    <DataDisplay name="Occupation" value={props.patient.occupation}/>
+                    <DataDisplay name="Religion" value={props.patient.religion}/>
+                    <DataDisplay name="Blood Group" value={props.patient.bloodGroup}/>
+                    <DataDisplay name="Allergies" value={props.patient.allergies}/>
+                    <DataDisplay name="Use of Alcohol" value={props.patient.useOfAlcohol}/>
+                    <DataDisplay name="Use of Tobacco" value={props.patient.useOfTobacco}/>
                 </div>
                 <div className="nextOfKin">
 

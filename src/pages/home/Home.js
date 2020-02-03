@@ -20,7 +20,7 @@ export const Home = (props) => {
         name:"John Traore",
         pob:"Zomba",
         contactNumber:"90199476",
-        sex: "M",
+        sex: "Male",
         dob: "25.12.1995",
         village: "",
         religion: "",
@@ -29,14 +29,14 @@ export const Home = (props) => {
         useOfAlcohol: true,
         useOfTobacco: true,
         bloodGroup: "0",
-        allergies: ['Fish', 'Nuts', 'Poisenes snakes'],
+        allergies: ['Fish', 'Nuts', 'Poisonous snakes'],
         id: "",
     }
     const patient2 = {
         name:"Lady John Traore II",
         pob:"Zomba",
         contactNumber:"99795712",
-        sex: "F",
+        sex: "Female",
         dob: "",
         village: "Zomba",
         religion: "Jedi",
@@ -52,12 +52,28 @@ export const Home = (props) => {
         name:"Yoshi Bring Hah!",
         pob:"Lilongwe",
         contactNumber:"23458342",
-        sex: "M",
+        sex: "Male",
         dob: "25.12.1995",
         village: "",
         religion: "",
         occupation: "",
         maritalStatus: "",
+        useOfAlcohol: false,
+        useOfTobacco: true,
+        bloodGroup: "0",
+        allergies: [],
+        id: "",
+    }
+    const patient4 = {
+        name:"Hakuna",
+        pob:"Lilongwe",
+        contactNumber:"23561234",
+        sex: "Male",
+        dob: "25.12.1995",
+        village: "Zigon",
+        religion: "Pastafarian",
+        occupation: "Priest",
+        maritalStatus: "Single",
         useOfAlcohol: false,
         useOfTobacco: true,
         bloodGroup: "0",
@@ -90,32 +106,7 @@ export const Home = (props) => {
                     <PersonButton 
                         history={history} 
                         setPatient={(data)=>props.setPatient(data)}
-                        patient={patient3}
-                    />
-                    <PersonButton 
-                        history={history} 
-                        setPatient={(data)=>props.setPatient(data)}
-                        patient={patient3}
-                    />
-                    <PersonButton 
-                        history={history} 
-                        setPatient={(data)=>props.setPatient(data)}
-                        patient={patient3}
-                    />
-                    <PersonButton 
-                        history={history} 
-                        setPatient={(data)=>props.setPatient(data)}
-                        patient={patient3}
-                    />
-                    <PersonButton 
-                        history={history} 
-                        setPatient={(data)=>props.setPatient(data)}
-                        patient={patient3}
-                    />
-                    <PersonButton 
-                        history={history} 
-                        setPatient={(data)=>props.setPatient(data)}
-                        patient={patient3}
+                        patient={patient4}
                     />
                 </div>
             </div>

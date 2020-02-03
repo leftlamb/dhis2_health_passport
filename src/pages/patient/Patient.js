@@ -2,6 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {useHistory} from 'react-router-dom'
 
 import {PersonButton, ControlledExpansionPanel} from '../../components'
+import {ContinueVisitDialog} from './ContinueVisitDialog'
+import {EnrollPatientButton} from './EnrollPatientButton'
 
 import './patient.css'
 
@@ -10,7 +12,6 @@ export const Patient = (props) => {
     const [isEnrolled, setEnrolled] = useState(false)
 
     useEffect(()=>{
-        console.log(props.patient)
         if(props.patient.name==="") {
             history.push('/')
         }
@@ -23,8 +24,8 @@ export const Patient = (props) => {
                 {props.patient.name}
             </span>
             <div className="buttonContainer">
-                <button>Start Visit</button>
-                <button disabled={!isEnrolled}>Continue Visit</button>
+                <EnrollPatientButton isEnrolled={isEnrolled} setEnrolled={(enroll)=>setEnrolled(enroll)}/>
+                <ContinueVisitDialog disabled={!isEnrolled}/>
             </div>
             <div className="informationContainer">
                 <ControlledExpansionPanel

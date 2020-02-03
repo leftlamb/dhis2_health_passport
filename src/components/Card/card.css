@@ -1,22 +1,38 @@
 
-@media only screen and (max-width: 800px) {
-
+@media only screen and (min-width: 800px) {
+    .card {
+        max-width: 60%;
+    }
 }
+
 .card {
+    flex: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    min-width: 48%;
-    max-width: 48%;
-    height: 200px;
     margin: 2px;
     font-size: 1.6em;
     box-shadow: 0 2px 5px 0 #666;
     border-radius: 2px;
     cursor: pointer;
     transition: .2s;
+    max-width: 400px;
+    max-width: 48%;
 }
+
+.bigCard {
+    min-width: 48%;
+    max-width: 48%;
+    height: 200px;
+}
+
+.smallCard {
+    padding: 15px 30px;
+    /* max-width: 90%; */
+}
+
+
 .card:hover {
     box-shadow: 0 5px 6px 0 #666;
 }

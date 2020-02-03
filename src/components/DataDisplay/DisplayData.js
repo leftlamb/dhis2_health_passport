@@ -7,8 +7,15 @@ export const DataDisplay = (props)=> {
 
     useEffect(()=>{
         setValue(props.value)
-        if(props.valueType==='BOOLEAN' || props.valueType==='TRUE_ONLY') {
+        if(props.valueType==='BOOLEAN' || props.valueType==='TRUE_ONLY' || typeof props.value === "boolean") {
             setValue(props.value?'Yes':'No')
+        }
+        if(Array.isArray(props.value)) {
+            let listItems = []
+            props.value.map((element, key)=>{
+                listItems.push(<span key={key} className="listElement">{element}</span>)
+            })
+            setValue(listItems)
         }
     }, [])
 
