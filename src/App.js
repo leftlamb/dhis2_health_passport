@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 
 import {Home, Patient, Register} from './pages'
+import { ARTForm, OPRForm } from './pages/programs';
 
 const MyApp = () => {
     const [patient, setPatient] = useState({
@@ -66,6 +67,18 @@ const MyApp = () => {
                 </Route>
                 <Route path="/register">
                     <Register/>
+                </Route>
+                <Route path="/programs/ART">
+                    <ARTForm
+                        setPatient={(data)=>setPatient(data)}
+                        patient={patient}
+                    />
+                </Route>
+                <Route path="/programs/OPR">
+                    <OPRForm
+                        setPatient={(data)=>setPatient(data)}
+                        patient={patient}
+                    />
                 </Route>
             </Switch>
         </Router>

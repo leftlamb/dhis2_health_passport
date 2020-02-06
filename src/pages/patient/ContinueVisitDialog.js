@@ -79,7 +79,7 @@ export const ContinueVisitDialog = (props) => {
         </DialogTitle>
         <DialogContent dividers>
             <Card name="OPR" small/>
-            <Card name="ART" small/>
+            <Card name="ART" site="/programs/ART" small/>
             <Card name="TB" small/>
         </DialogContent>
       </Dialog>

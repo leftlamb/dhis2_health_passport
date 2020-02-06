@@ -4,7 +4,7 @@ import {useHistory} from 'react-router-dom'
 
 import i18n from '@dhis2/d2-i18n'
 import './home.css'
-import {Card, PersonButton, Search} from '../../components'
+import {Card, PersonButton, Search, ActivePatients} from '../../components'
 
 import journal_icon from '../../img/journal_icon.png'
 
@@ -83,6 +83,11 @@ export const Home = (props) => {
     
     return (
         <div className="container">
+            {props.patient.name!==""&&
+            <div className="activePatientContainer">
+                <PersonButton history={history} patient={props.patient} setPatient={(data)=>props.setPatient(data)}/>
+            </div>
+            }
             <div className="searchContainer">
                 <div className="searchBarContainer">
                     <Search/>
@@ -110,11 +115,11 @@ export const Home = (props) => {
                     />
                 </div>
             </div>
-            
             <div className="cardContainer">
-                <Card name="Active Patients" img={journal_icon} history={history} site="/"/>
+                <ActivePatients setPatient={(data)=>props.setPatient(data)}/>
                 <Card name="Register Patient" img={journal_icon} history={history} site="/register"/>
-                <Card name="Journal" img={journal_icon} history={history} site="/"/>
+                <Card name="ART" history={history} site="/programs/ART"/>
+                <Card name="OPR" history={history} site="/programs/OPR"/>
                 <Card name="Disease Guidelines" img={journal_icon} history={history} site="/"/>
                 <Card name="Drug Ordering" img={journal_icon} history={history} site="/"/>
                 <Card name="Create Report" img={journal_icon} history={history} site="/"/>
